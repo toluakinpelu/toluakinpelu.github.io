@@ -1,0 +1,180 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#1f3b63">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23C94A2B'/%3E%3C/svg%3E"><title>The 10-Minute Rug Test: How to Spot a Failing Web3 Project Before It Fails You | Tolu Akinpelu</title><meta name="description" content="A five-step checklist for spotting a failing Web3 project, with a Squid Game Token case study and a quick reference."><meta property="og:title" content="The 10-Minute Rug Test: How to Spot a Failing Web3 Project Before It Fails You"><meta property="og:description" content="A five-step checklist for spotting a failing Web3 project, with a Squid Game Token case study and a quick reference."><meta property="og:type" content="article"><meta name="author" content="Tolu Akinpelu">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400,0..100,0..1;1,9..144,400,0..100,0..1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f3efe6;--ink:#25251f;--muted:#5b5a4f;--rule:rgba(37,37,31,.2);--bg:var(--paper);--fg:var(--ink);--accent:#a8452a;--card:#ebe5d6;
+--serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans","Helvetica Neue",Arial,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#16171a;--fg:#ece7da;--muted:#a8a698;--rule:rgba(236,231,218,.22);--accent:#f0997a;--card:#1f2125;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:1.125rem;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}img{max-width:100%;display:block}
+:focus-visible{outline:3px solid #cc6243;outline-offset:3px}
+.prog{position:fixed;left:0;top:0;height:4px;width:100%;background:#1f3b63;transform-origin:left;transform:scaleX(0);z-index:50;margin-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:1rem clamp(1.25rem,5vw,3rem);font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+.bar a{text-decoration:none}.bar .mark{font-family:var(--serif);font-size:1.25rem;letter-spacing:-.02em;text-transform:none}
+.hero{background:#1f3b63;color:#f3efe6;position:relative;overflow:hidden;padding:clamp(3rem,9vw,7rem) clamp(1.25rem,5vw,3rem) clamp(3rem,7vw,5.5rem)}
+.hero .in{max-width:62rem;margin:0 auto;position:relative;z-index:2}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 1.4rem;display:flex;gap:.8rem;align-items:center}
+.eyebrow::before{content:"";width:2.2rem;height:1px;background:currentColor}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,8.2vw,6.4rem);line-height:.96;letter-spacing:-.035em;margin:0 0 1.6rem;text-wrap:balance;font-variation-settings:"opsz" 144,"SOFT" 40,"WONK" 1}
+.dek{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.6vw,1.9rem);line-height:1.25;max-width:40rem;margin:0 0 2.2rem;opacity:.95}
+.meta{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.meta b{font-weight:400;background:#e8ce83;color:#25251f;padding:.25rem .7rem;border-radius:99px}
+
+.wrap{max-width:42.5rem;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) clamp(1.25rem,5vw,1.5rem) 3rem}
+.wrap p{margin:0 0 1.35em;text-wrap:pretty}
+.wrap p.lead::first-letter{font-family:var(--serif);float:left;font-size:5.4em;line-height:.8;padding:.08em .1em 0 0;color:var(--accent);font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 1}
+.wrap p.beat{font-family:var(--serif);font-size:1.5rem;line-height:1.25;letter-spacing:-.015em;margin:0 0 .8em;padding-left:1.1rem;border-left:3px solid var(--accent)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,4.4vw,2.7rem);line-height:1.05;letter-spacing:-.03em;margin:3rem 0 1.1rem;text-wrap:balance;font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 1}
+h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.15;letter-spacing:-.02em;margin:2rem 0 .5rem}
+ul,ol{padding-left:1.3rem;margin:0 0 1.4em}li{margin-bottom:.5em}
+.quick{background:#e8ce83;color:#25251f;margin:3.5rem calc(-1*clamp(0rem,3vw,2rem));padding:clamp(1.5rem,4vw,2.5rem);--accent:#a8452a}
+.quick h2{margin-top:0}.quick h3{margin-top:1.6rem;font-size:1.25rem}.quick ul{list-style:square}.quick p{margin:1.8rem 0 0}.quick p strong{color:#a8452a}
+.refs{margin-top:3.5rem;border-top:1px solid var(--rule);padding-top:.5rem;font-size:.92rem;line-height:1.55;color:var(--muted)}
+.refs h2{font-size:1.6rem;color:var(--fg)}.refs li{overflow-wrap:anywhere}
+.author{border-top:1px solid var(--rule);background:var(--card)}
+.author .in{max-width:62rem;margin:0 auto;padding:clamp(2.5rem,6vw,4rem) clamp(1.25rem,5vw,3rem);display:grid;grid-template-columns:9rem 1fr;gap:clamp(1.2rem,4vw,3rem);align-items:center}
+.author .ph{width:9rem;aspect-ratio:4/5;border-radius:999px 999px 0 0;overflow:hidden;background:#1f3b63}.author img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.author h2{margin:0 0 .5rem;font-size:clamp(1.7rem,3.6vw,2.4rem)}.author p{margin:0 0 1rem;color:var(--muted);max-width:34rem;line-height:1.55}
+.links{display:flex;flex-wrap:wrap;gap:.6rem}.links a{font-family:var(--mono);font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;border:1px solid currentColor;padding:.55rem 1rem;border-radius:99px;transition:background .3s,color .3s}
+.links a:hover{background:var(--fg);color:var(--bg)}
+.next{display:block;text-decoration:none;background:#b24327;color:#f3efe6;padding:clamp(2rem,6vw,4rem) clamp(1.25rem,5vw,3rem)}
+.next .in{max-width:62rem;margin:0 auto}.next .eyebrow{margin-bottom:.9rem}
+.next span.t{font-family:var(--serif);font-size:clamp(1.8rem,5vw,3.6rem);line-height:1;letter-spacing:-.03em;display:block;max-width:20ch;transition:transform .5s}
+.next:hover span.t{transform:translateX(8px)}
+footer{padding:1.5rem clamp(1.25rem,5vw,3rem);font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:560px){.author .in{grid-template-columns:1fr}.quick{margin-inline:-.5rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.next span.t{transition:none}}
+.backbtn{background:#f3efe6;color:#1d1a16;font-weight:500;padding:.7rem 1.2rem;border-radius:99px;border:2px solid #f3efe6;transition:background .25s,color .25s}.backbtn:hover,.backbtn:focus-visible{background:transparent;color:#f3efe6}.backend{border-top:1px solid var(--rule);padding:clamp(2.2rem,5vw,3.2rem) clamp(1.25rem,5vw,3rem);text-align:center}.backend a{display:inline-block;font-family:var(--mono);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;background:var(--fg);color:var(--bg);font-weight:500;padding:.95rem 1.7rem;border-radius:99px;border:2px solid var(--fg);transition:background .25s,color .25s}.backend a:hover,.backend a:focus-visible{background:transparent;color:var(--fg)}</style></head><script>try{var __t=localStorage.getItem("tolu-theme");if(__t)document.documentElement.dataset.theme=__t}catch(e){}</script><body>
+<div class="prog" id="prog"></div>
+<header class="hero"><div class="bar" style="position:absolute;left:0;right:0;top:0;z-index:3"><a class="mark" href="../index.html#/work">Tolu Akinpelu</a><a class="backbtn" href="../index.html#/work">&larr; Back to the site</a></div>
+<div class="deco" aria-hidden="true"></div><style>.deco{position:absolute;right:0;top:0;bottom:0;width:clamp(4rem,14vw,12rem);background:repeating-linear-gradient(90deg,#e8ce83 0 14px,#1f3b63 14px 28px,#cc6243 28px 42px,#1f3b63 42px 56px);opacity:.9;z-index:1}</style>
+<div class="in" style="padding-top:2rem"><h1>The 10-Minute Rug Test: How to Spot a Failing Web3 Project Before It Fails You</h1><p class="dek">A five-step checklist for reading the warning signs of a rug pull before the chart does.</p>
+<div class="meta"><span>By Tolu Akinpelu</span><b>12 min read</b></div></div></header>
+<article class="wrap"><p class="lead">You refresh the chart. At first, it looks like your screen froze. Then you realize the red candle is not a glitch. It is a straight line down. A cliff.</p>
+<p>The price has crashed ninety percent in minutes. You check your wallet, and the numbers look like someone cut off all the zeros out of spite.</p>
+<p>You rush back to Telegram. Still quiet. The last message from the founder was some midnight update about “big things loading.” That was eleven hours ago. He has not been online since. The moderators who used to type paragraphs at light speed have vanished too. Their profile pictures replaced with “last seen recently.”</p>
+<p>You try to sell. The transaction fails. You try again. Failed. You try swapping through another DEX. Failed. Your stomach drops. This is the part nobody talks about. The moment your mind accepts what your screen has been trying to tell you. The liquidity is gone. The exits are blocked. You are holding a bag that now has zero value.</p>
+<p>X is worse. Your timeline is full of screenshots. Wallets drained. Charts bleeding. People typing in all caps because their emotions are too loud for lowercase. Someone posts the founder’s wallet on-chain. Another posts that funds moved to an unknown address. Blockchain investigators are suddenly born mid-thread. Everyone is shouting “I knew it.” They did not know. Nobody knew. Not in time.</p>
+<p>And in that chaos, the obvious hits you: nothing is coming back. That is the moment you know. You have been rugged.</p>
+<h2 id="the-pattern-rugs-are-rarely-spontaneous">The Pattern: Rugs Are Rarely Spontaneous</h2>
+<p>Here is the strange thing about getting rugged. One second, life is moving normally; the next second, your brain goes into shock. You tell yourself it must be a glitch. Maybe the API is slow. Maybe the chart is wrong. Maybe the DEX is misbehaving. Anything but the truth.</p>
+<p>But once the panic settles and your heart rate returns to something human, you start seeing the pattern. And that is when you realize that rugs do not come out of nowhere. They are construction sites. Someone built them. Brick by brick.</p>
+<p>When you replay the project in your mind, details become obvious, hard to miss. The founder who always spoke but never really answered direct questions. The Discord that seemed loud on the surface but went quiet anytime someone asked for proof. The moderators who treated simple curiosity like disrespect. Marketing that screamed louder than the product. The promises that never matched the math. It was all there. You just did not want to believe it.</p>
+<p>Meanwhile, people who had been in the ecosystem longer were watching the same story unfold with the calmness of someone who has seen this movie five times. They were not smarter. They were not more technical. They simply understood something every newcomer eventually learns. A rug is only surprising to the person holding the bag. To everyone else, it is another Tuesday.</p>
+<p>This is why the 10-Minute Rug Test works. Because rugs are not mysteries. They leave fingerprints everywhere. You can spot the danger in minutes if you know what questions to ask.</p>
+<p class="beat">Who controls the money?</p>
+<p class="beat">Who benefits from the hype?</p>
+<p class="beat">Who disappears when things go quiet?</p>
+<p class="beat">Who is building?</p>
+<p class="beat">Who is pretending?</p>
+<p>One thing’s certain: rugs might feel random, but they are built on careful decisions. And once you learn to see those patterns, the red flags become a warning. One you will never ignore again.</p>
+<h2 id="step-1-check-the-founder-incentive-struc">Step 1: Check the Founder Incentive Structure</h2>
+<p>The first place to raise your eyebrows is not the code. It is the people behind it. You need to know who is calling the shots and what they have to gain if things go wrong.</p>
+<p>Look at the founders. Are they anonymous, or do they have names, faces, past projects? Anonymous teams feel like a gamble. When a person hides, what are they hiding from?</p>
+<p>Next, check the vesting schedule. Is it publicly verifiable on-chain? Does the team lock their tokens for months or years? If they are planning to cash out early, they might be less invested in the long term. If there is no vesting schedule, or if what they claim doesn’t match what you see on-chain, you are already playing on shaky ground.</p>
+<p>Also ask: where did their money come from? Did they raise from respected VCs, or are they backed by shady funds nobody has heard of? Real backers make for real skin in the game. Shadow funds? Less comforting.</p>
+<p>Finally, listen to what they talk about. Do they speak about product, community, real utility, or do they only talk about “price,” “growth,” and “moon”? Founders who care more about their token’s price than its purpose are often the same people who walk away when that price crashes.</p>
+<p>There is a pattern here. In 2023, over 46 percent of DeFi rug pulls involved fully anonymous teams. That data point comes from Chainalysis. These are not mistakes; they are calculated exits.</p>
+<p>To illustrate, imagine the “charismatic founder.” He hosts Spaces every week, tweets in quotables, and paints the future in bright colors. He is charming, confident, visionary, but when the storm hits, he disappears. People scramble for proof. Moderators go silent. The links get deleted. And the community, which once felt like a concert, suddenly feels like an empty stadium.</p>
+<p>If you see a founder you cannot hold accountable, or a team that has nothing to lose, you are not dealing with a builder. You are dealing with a speculator ready to abandon ship when the value building ends.</p>
+<h2 id="step-2-the-marketing-smell-test">Step 2: The Marketing Smell Test</h2>
+<p>Marketing is where the fake confidence usually leaks. It is loud, shiny, and often smells too sweet. You can smell a rug from a mile away if you pay attention.</p>
+<p>Start with the graphics. If the site looks like it belongs in a tech awards show but there is no substance behind it, pause. Over-polished visuals are often a warning, not proof of a working product.</p>
+<p>Next, watch the hype. Celebrity endorsements weeks into a project, before there is anything real to show? That is not luck. That is manipulation. In 2022, the FTC had to step in when celebrity crypto endorsements misled thousands of people, proving that even fame can’t replace real accountability.</p>
+<p>Then there is the noise on social media. Twitter Spaces full of hype merchants who promise the world but cannot explain the product. Influencer lists longer than the whitepaper itself. Micro-creators making $150 to pump tokens they do not understand. And it works every time because humans are wired to trust excitement.</p>
+<p>Simple rule: if it ever smells like marketing more than product, stop.</p>
+<h2 id="step-3-on-chain-red-flags-you-can-spot-i">Step 3: On-Chain Red Flags You Can Spot in Under 60 Seconds</h2>
+<p>This is where on-chain data tells the obvious. The blockchain does not care about marketing or charisma. It records exactly what is happening. And if you know where to look, it will scream the truth at you.</p>
+<p>First, check liquidity. Who owns it? How long is it locked for? If most of the liquidity sits in a single wallet, you are standing on a dangerous edge. That wallet can exit in a second, and everything falls apart.</p>
+<p>Next, scan ownership. One wallet controlling twenty percent or more of supply is no accident. That is too much power concentrated in the wrong hands.</p>
+<p>Then there is token function. Can anyone mint more tokens? Can the owner drain the contract? Are there hidden privileges nobody talks about? These are the mechanics of exit strategies disguised as features.</p>
+<p>Look at activity patterns. Are funds moving in unusual bursts? Are transactions happening at odd hours? These are breadcrumbs, but they tell a story if you follow them.</p>
+<p>The beauty of the blockchain is it leaves receipts. You do not have to trust anyone’s word. You can check the wallet, the smart contract, the vesting schedule. Every rug leaves its signature. According to Nansen and Chainalysis, most failed DeFi projects had concentrated ownership and early liquidity pulls. That’s a red flag. And anyone willing to spend sixty seconds checking can see it.</p>
+<h2 id="step-4-the-community-stress-test">Step 4: The Community Stress Test</h2>
+<p>By now, you have checked the founders, the token, the marketing, and the chain. But there is one final test. The community. Because a project is only as real as the people who live inside it.</p>
+<p>Start with the green flags. Builders who answer questions directly. Developers who post consistent updates, not excuses. People who talk about the product, its features, its roadmap, not just the price of the token or how high it might go. When you see this, you know the team values creation over perception. They are playing the long game.</p>
+<p>Now the red flags. Moderators who threaten critics. Channels flooded with wagmi chants. Zero documentation, no clarity on how the system actually works. Reposting memes while claiming to be building the future. The community feels electric, but is actually hollow.</p>
+<p>This is the “cult language test.” You know it when you see it. The project stops feeling like a product and starts feeling like a belief system. Question it, and you are the outsider. Doubt it, and you are the enemy.</p>
+<p>You scroll through Discord and Telegram, and the pattern is clear. People are addicted to being seen, not to building. The loudest voices are rewarded and the quiet ones are ignored. But if the community is grounded in substance, not chants, if the conversation revolves around progress instead of price, if the team answers questions with honesty, you are part of a real project.</p>
+<p>The community never lies. It reveals the truth about the project long before the chart does.</p>
+<h2 id="case-study-squid-game-token-2021">Case Study: Squid Game Token (2021)</h2>
+<p>It started like every story you wish was true. A meme, a hype, a dream. People were tapping into a cultural phenomenon and thinking they were early. Telegram exploded. Spaces buzzed. Charts shot up. Everyone was making screenshots, sharing them, bragging. You could feel the electricity in the chat.</p>
+<p>But if you ran the 10-Minute Rug Test, the warning signs were everywhere.</p>
+<h3>Test 1: Founder Incentives</h3>
+<p>The team was fully anonymous. Wallets showed massive allocations to a few addresses, while public statements emphasized price potential over utility. Within days of launch, founder wallets moved suspiciously, a pattern consistent with 46 percent of anonymous DeFi rug pulls in 2023 (Chainalysis).</p>
+<h3>Test 2: Tokenomics</h3>
+<p>Token supply was highly concentrated. Liquidity pools were small and short-term. The smart contract allowed unlimited minting, giving insiders full control.</p>
+<h3>Test 3: Marketing Smell Test</h3>
+<p>Marketing was over-the-top. Celebrities promoted the token before the product existed. Micro-influencers were paid to advertise it.</p>
+<h3>Test 4: On-Chain Red Flags</h3>
+<p>Ownership and liquidity were centralized. A few wallets controlled more than 50 percent of supply. Early transaction patterns suggested premeditated extraction.</p>
+<h3>Test 5: Community Stress Test</h3>
+<p>The Telegram and Discord were full of updates focused on hype instead of development. The community structure amplified emotion over evidence.</p>
+<h3>Result</h3>
+<p>By every measurable standard, Squid Game Token met all the rug pull indicators. Charts, wallets, contracts, and community behavior all pointed to the same outcome. The collapse was not random. It was written into the incentives and mechanics of the project from day one.</p>
+<p>This is how the 10-Minute Rug Test works. It is not theory. It is seeing the rug before it is pulled.</p>
+<h2 id="why-people-still-fall-for-rugs-the-behav">Why People Still Fall for Rugs: The Behavioral Economics Behind the Loss</h2>
+<p>It is not just the code or the wallets. It is your brain. Humans are wired to chase patterns, to trust stories, to fear missing out.</p>
+<p>Unfortunately, rugs exploit that wiring every single time.</p>
+<p>FOMO strikes first. You see the charts rising. Screenshots flood social media. Everyone around you is celebrating. You tell yourself this is the moment to act. You are early. You are smart. You are not like the others. The illusion of “early” clouds judgment.</p>
+<p>Authority bias follows. The founder’s behavior is polished. Experts endorse. Your gees hype it. You trust them, because you have to. We are built to defer to authority, even when the authority has no skin in the game.</p>
+<p>Hype contagion spreads like fire. Creators post videos, memes, threads. Everything just echoes excitement. You scroll, you tap, you tell yourself everyone else sees the same signs. It becomes a herd, and herds rarely question the path they are on.</p>
+<p>And here’s the silent killer: loss aversion. Even when something feels wrong, the thought of leaving early, of missing out on a gain, keeps you holding. You want to exit. Your brain tells you to run. But the hope of profit overrides fear. You rationalize, convince yourself, wait.</p>
+<p class="beat">And the rug appears.</p>
+<p>Interestingly, people convince themselves they are smarter than the crowd. But they are not. They are human. They see patterns that do not exist, they reinterpret warning signs as opportunities. Behavioral economics is the invisible hand behind every collapse. The loss might look random, but the truth is, your brain is complicit in every decision that keeps you in the game. Understanding it is the first step to survival.</p>
+<h2 id="the-rule-of-survival-if-you-cannot-expla">The Rule of Survival: If You Cannot Explain It, You Should Not Buy It</h2>
+<p>Everything comes down to one principle. If you cannot explain it in plain words, you should not touch it.</p>
+<p class="beat">If you cannot explain how the project makes money.</p>
+<p class="beat">If you cannot explain why the token is needed.</p>
+<p class="beat">If you cannot explain who holds the power.</p>
+<p class="beat">Walk away.</p>
+<p>Because every rug starts with confusion and every loss begins with ignoring the small, clear signs.</p>
+<p>Imagine the first paragraph of this piece again. The Telegram chat that goes quiet. The founder’s final message hanging in the air. The chart sinking. Wallets wiped. That is the cost of ignoring what is in front of you. That is what happens when emotion outruns evidence.</p>
+<p>The Rule of Survival exists to keep you clear-eyed.</p>
+<p>It is simple: study the patterns and you will see the next rug coming.</p>
+<aside class="quick"><p class="eyebrow">Keep this</p><h2>The 10-Minute Rug Test: Quick Reference</h2>
+<h3>1. Founder Incentives</h3>
+<ul>
+<li>Are the founders anonymous or transparent?</li>
+<li>Is the vesting schedule verifiable on-chain?</li>
+<li>Are wallets holding massive allocations?</li>
+<li>Do founders talk more about price than product?</li>
+</ul>
+<h3>2. Marketing Smell Test</h3>
+<ul>
+<li>Are graphics over-polished with no substance?</li>
+<li>Are celebrities endorsing too early?</li>
+<li>Are Spaces full of hype merchants, not builders?</li>
+<li>Are micro-influencers paid to pump the project?</li>
+</ul>
+<h3>3. On-Chain Red Flags</h3>
+<ul>
+<li>Who controls the liquidity?</li>
+<li>Are large wallets holding too much supply?</li>
+<li>Are there hidden privileges in the smart contract?</li>
+<li>Do transaction patterns suggest premeditated exits?</li>
+</ul>
+<h3>4. Community Stress Test</h3>
+<ul>
+<li>Are questions answered with honesty or slogans?</li>
+<li>Are updates consistent and product-focused?</li>
+<li>Are memes replacing meaningful discussion?</li>
+<li>Is the community cult-like or grounded in substance?</li>
+</ul>
+<h3>5. Behavioral Check</h3>
+<ul>
+<li>Are you feeling FOMO?</li>
+<li>Are you rationalizing hype or ignoring red flags?</li>
+<li>Are you chasing “early” status over safety?</li>
+<li>Can you explain why this project exists and who benefits?</li>
+</ul>
+<p><strong>Rule of Survival:</strong> If you cannot explain the project’s purpose, token necessity, or who holds power, walk away. Every red flag ignored is a step closer to losing your stake.</p>
+</aside></article>
+<div class="backend"><a href="../index.html#/work">&larr; Back to the site</a></div>
+<section class="author"><div class="in" style="display:block"><div class="links"><a href="https://open.substack.com/pub/tolutheunicorn" target="_blank" rel="noopener noreferrer">Substack</a><a href="https://linkedin.com/in/toluakinpelu" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:toluakinpelu1@gmail.com">Email</a></div></div></section>
+<a class="next" href="notcoin.html"><div class="in"><p class="eyebrow">Read next</p><span class="t">Notcoin: The Viral Tap</span></div></a>
+<footer>&copy; Tolu Akinpelu &middot; Lagos, Nigeria</footer>
+<script>(function(){var p=document.getElementById('prog'),a=document.querySelector('article');function u(){var r=a.getBoundingClientRect(),t=r.height-innerHeight;var v=Math.min(1,Math.max(0,-r.top/Math.max(t,1)));p.style.transform='scaleX('+v+')'}addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u()})();</script>
+</body></html>
